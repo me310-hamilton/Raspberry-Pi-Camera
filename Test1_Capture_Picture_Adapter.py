@@ -11,6 +11,16 @@ gp.setup(12,gp.OUT)
 gp.setup(13,gp.OUT)
 
 i2c = "i2cset -y 10 0x24 0x24 0x12"
+
+# Set to single channel 0
+#i2cset -y 10 0x24 0x24 0x02
+# Set to single channel 1
+#i2cset -y 10 0x24 0x24 0x12
+# Set to single channel 2
+#i2cset -y 10 0x24 0x24 0x22
+# Set to single channel 3
+#i2cset -y 10 0x24 0x24 0x32
+
 os.system(i2c)
 gp.output(7, True)
 gp.output(11, True)
